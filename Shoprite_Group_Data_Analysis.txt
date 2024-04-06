@@ -1,0 +1,5 @@
+WITH pricerite AS (
+    SELECT * FROM Sample_ShopriteGroup_11_30_2023 WHERE job_number = '3333333'
+)
+select string_agg(dist_job,',') from (select distinct(job_number) as dist_job from pricerite) x
+ 
